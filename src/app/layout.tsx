@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en" className="dark scroll-smooth" suppressHydrationWarning>
       <body className={cn(inter.className, "min-h-screen bg-background text-foreground antialiased")}>
         <Navbar />
         <main className="flex min-h-screen flex-col">
