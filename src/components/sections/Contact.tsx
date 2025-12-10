@@ -23,11 +23,11 @@ export function Contact() {
 
                             <div className="space-y-4">
                                 <a
-                                    href="mailto:hello@example.com"
+                                    href="mailto:mdatikfaysal@gmail.com"
                                     className="flex items-center gap-3 text-sm hover:underline"
                                 >
                                     <Mail className="h-5 w-5" />
-                                    hello@example.com
+                                    mdatikfaysal@gmail.com
                                 </a>
                                 <div className="flex items-center gap-3 text-sm">
                                     <MessageSquare className="h-5 w-5" />

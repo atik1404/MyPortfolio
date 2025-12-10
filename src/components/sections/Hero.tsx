@@ -35,7 +35,7 @@ export function Hero() {
                         transition={{ duration: 0.5, delay: 0.4 }}
                         className="block text-foreground"
                     >
-                        digital experiences.
+                        mobile applications.
                     </motion.span>
                 </h1>
 
@@ -45,9 +45,9 @@ export function Hero() {
                     transition={{ duration: 0.5, delay: 0.5 }}
                     className="max-w-2xl text-xl text-muted-foreground md:text-2xl"
                 >
-                    I'm a Full Stack Developer specializing in building exceptional digital
-                    products. Currently, I'm focused on building accessible, human-centered
-                    products.
+                    I'm a Mobile Application Developer specializing in building exceptional Android
+                    and cross-platform apps. Currently, I'm focused on building accessible,
+                    high-performance mobile products.
                 </motion.p>
 
                 <motion.div

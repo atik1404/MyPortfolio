@@ -5,9 +5,16 @@ import { Section } from "@/components/ui/Section";
 import { motion } from "framer-motion";
 
 const skills = [
-    "React", "Next.js", "TypeScript", "Tailwind CSS",
-    "Node.js", "PostgreSQL", "GraphQL", "Docker",
-    "AWS", "Figma", "Git", "Framer Motion"
+    "Kotlin", "Dart", "Jetpack Compose", "Flutter",
+    "Coroutines & Flow", "StateFlow & SharedFlow",
+    "Material Design 3", "Navigation",
+    "Hilt & Dagger", "KSP", "Modular Architecture",
+    "Retrofit / OkHttp", "Dio", "JSON Serialization",
+    "Room / DataStore", "Firebase", "In-App Purchases",
+    "BLoC / Riverpod", "Clean Architecture", "MVVM",
+    "Performance Optimization", "Payment Gateways",
+    "WorkManager", "CI/CD", "Git & GitHub",
+    "Play Store Publishing", "UI/UX Implementation"
 ];
 
 export function Skills() {

@@ -9,24 +9,67 @@ import Link from "next/link";
 
 const projects = [
     {
-        title: "Project One",
+        title: "Travel App",
         description:
-            "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information of each track.",
-        tags: ["Next.js", "TypeScript", "Spotify API"],
+            "A comprehensive travel booking application designed for seamless itinerary planning, flight and hotel reservations, and local experience discovery.",
+        tags: ["Kotlin", "Jetpack Compose", "Google Maps API"],
+        image: "/images/project-travel.png",
         links: { demo: "#", git: "#" },
     },
     {
-        title: "Project Two",
+        title: "Driver App",
         description:
-            "A nice simple chat app for you and your friends. Built with Socket.io and React, it features real-time messaging, user authentication, and group chats.",
-        tags: ["React", "Socket.io", "Express"],
+            "Dedicated application for drivers to manage trips, view earnings in real-time, navigate efficiently, and communicate with passengers.",
+        tags: ["Flutter", "Dart", "Google Maps SDK"],
+        image: "/images/project-driver.png",
         links: { demo: "#", git: "#" },
     },
     {
-        title: "Project Three",
+        title: "Bus Ticket Booking",
         description:
-            "A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.",
-        tags: ["VS Code", "Theme", "Design"],
+            "Intercity bus ticketing system featuring visual seat selection, real-time bus tracking, and secure payment processing.",
+        tags: ["Android", "Kotlin", "Payment Gateway"],
+        image: "/images/project-bus.png",
+        links: { demo: "#", git: "#" },
+    },
+    {
+        title: "Sales & Order Management",
+        description:
+            "Enterprise mobile tool for field sales representatives to manage customer orders, view inventory, and track sales performance offline.",
+        tags: ["Android", "Room DB", "Sync Adapter"],
+        image: "/images/project-sales.png",
+        links: { demo: "#", git: "#" },
+    },
+    {
+        title: "Dating App",
+        description:
+            "Social discovery platform featuring advanced matching algorithms, real-time chat, and profile verification for a safe user experience.",
+        tags: ["Flutter", "Firebase", "WebRTC"],
+        image: "/images/project-dating.png",
+        links: { demo: "#", git: "#" },
+    },
+    {
+        title: "Student Payment System",
+        description:
+            "Secure and intuitive payment gateway integration allowing students and parents to pay tuition and fees directly from their mobile devices.",
+        tags: ["Kotlin", "SSLCommerz", "Retrofit"],
+        image: "/images/project-payment.png",
+        links: { demo: "#", git: "#" },
+    },
+    {
+        title: "Food Delivery Service",
+        description:
+            "Real-time food ordering application with live order tracking, restaurant discovery, and seamless in-app payments.",
+        tags: ["Flutter", "Google Maps", "Stripe"],
+        image: "/images/project-food.png",
+        links: { demo: "#", git: "#" },
+    },
+    {
+        title: "Fitness Tracker",
+        description:
+            "Activity tracking app offering personalized workout plans, progress analytics, and integration with wearable devices.",
+        tags: ["Jetpack Compose", "Health Connect", "Room"],
+        image: "/images/project-fitness.png",
         links: { demo: "#", git: "#" },
     },
 ];
@@ -42,10 +85,12 @@ export function Projects() {
                     {projects.map((project, index) => (
                         <Card key={index} className="flex flex-col gap-4 overflow-hidden p-0">
                             <div className="relative aspect-video w-full bg-muted">
-                                {/* Image Placeholder */}
-                                <div className="flex h-full w-full items-center justify-center text-muted-foreground/50">
-                                    Project Screenshot
-                                </div>
+                                <Image
+                                    src={project.image}
+                                    alt={project.title}
+                                    fill
+                                    className="object-cover transition-transform duration-300 hover:scale-105"
+                                />
                             </div>
                             <div className="flex flex-1 flex-col justify-between p-6">
                                 <div>
