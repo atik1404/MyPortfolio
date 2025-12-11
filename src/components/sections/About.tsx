@@ -45,10 +45,10 @@ export function About() {
                     </div>
                     <div className="relative aspect-square overflow-hidden rounded-xl bg-muted">
                         <Image
-                            src="/images/profile.jpg"
+                            src="/images/profile-v2.jpg"
                             alt="Profile Photo"
                             fill
-                            className="object-cover object-left"
+                            className="object-cover object-top"
                             priority
                         />
                     </div>

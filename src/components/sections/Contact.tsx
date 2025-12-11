@@ -5,8 +5,22 @@ import { Card } from "@/components/ui/Card";
 import { Section } from "@/components/ui/Section";
 import { Mail, MessageSquare, Send } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
 
 export function Contact() {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+
+    const handleSendMessage = (e: React.FormEvent) => {
+        e.preventDefault();
+        const subject = `Portfolio Contact from ${name}`;
+        const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+        window.location.href = `mailto:mdatikfaysal@gmail.com?subject=${encodeURIComponent(
+            subject
+        )}&body=${encodeURIComponent(body)}`;
+    };
+
     return (
         <Section id="contact" className="pb-32">
             <div className="container max-w-4xl">
@@ -44,15 +58,18 @@ export function Contact() {
                     </div>
 
                     <div className="p-8">
-                        <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+                        <form className="space-y-4" onSubmit={handleSendMessage}>
                             <div className="space-y-2">
                                 <label htmlFor="name" className="text-sm font-medium">
                                     Name
                                 </label>
                                 <input
                                     id="name"
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
                                     className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                                     placeholder="Your Name"
+                                    required
                                 />
                             </div>
                             <div className="space-y-2">
@@ -62,8 +79,11 @@ export function Contact() {
                                 <input
                                     id="email"
                                     type="email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
                                     className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                                     placeholder="you@example.com"
+                                    required
                                 />
                             </div>
                             <div className="space-y-2">
@@ -72,8 +92,11 @@ export function Contact() {
                                 </label>
                                 <textarea
                                     id="message"
+                                    value={message}
+                                    onChange={(e) => setMessage(e.target.value)}
                                     className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                                     placeholder="How can I help you?"
+                                    required
                                 />
                             </div>
                             <Button type="submit" className="w-full">
