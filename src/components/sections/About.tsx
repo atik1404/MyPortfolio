@@ -11,8 +11,8 @@ export function About() {
                 <div className="grid gap-12 md:grid-cols-2">
                     <div className="space-y-6 text-lg text-muted-foreground">
                         <p>
-                            I’m a mobile application developer who loves turning complex problems
-                            into smooth, fast and user-friendly apps. Over the past few years,
+                            I’m a mobile application developer with over <strong>5 years of experience</strong> who loves turning complex problems
+                            into smooth, fast and user-friendly apps. Throughout my career,
                             I’ve worked end-to-end on real-world products like intercity ticket
                             booking, vehicle rental, ERP, payment, and social/dating apps — from
                             planning and architecture to shipping to the Play Store and iterating
