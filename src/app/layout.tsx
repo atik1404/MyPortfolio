@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
 import { cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,12 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark scroll-smooth" suppressHydrationWarning>
-      <body className={cn(inter.className, "min-h-screen bg-background text-foreground antialiased")}>
+      <body className={cn(inter.className, "min-h-screen bg-background text-foreground antialiased")} suppressHydrationWarning>
         <Navbar />
         <main className="flex min-h-screen flex-col">
           {children}
         </main>
-        <Footer />
       </body>
     </html>
   );

@@ -7,62 +7,121 @@ import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-const projects = [
+interface ProjectLinks {
+    demo?: string;
+    android?: string;
+    ios?: string;
+}
+
+interface Project {
+    title: string;
+    description: string;
+    tags: string[];
+    image: string;
+    links: ProjectLinks;
+}
+
+const projects: Project[] = [
     {
-        title: "Travel Android App",
+        title: "Transport Booking",
         description:
-            "A comprehensive travel booking application designed for seamless itinerary planning, flight and hotel reservations, and local experience discovery.",
-        tags: ["Flutter", "Dart", "Bloc", "Google Maps"],
-        image: "/images/project-travel.png",
-        links: { demo: "https://tinyurl.com/37t3katx" },
-    },
-    {
-        title: "Travel iOS App",
-        description:
-            "A comprehensive travel booking application designed for seamless itinerary planning, flight and hotel reservations, and local experience discovery.",
-        tags: ["Flutter", "Dart", "Bloc", "Google Maps"],
-        image: "/images/project-travel.png",
-        links: { demo: "https://tinyurl.com/37t3katx" },
+            "A comprehensive multimodal transport booking application covering bus ticketing, ride-sharing, and rental services with real-time tracking.",
+        tags: [
+            "Flutter",
+            "Dart",
+            "BLoC",
+            "GoRouter",
+            "Firebase",
+            "Push notification",
+        ],
+        image: "/images/project-travel-cover.png",
+        links: {
+            android: "https://tinyurl.com/37t3katx",
+            ios: "https://apps.apple.com/us/app/jatri-multimode-travel-app/id6745209359",
+        },
     },
     {
         title: "Driver App",
         description:
             "Dedicated application for drivers to manage trips, view earnings in real-time, navigate efficiently, and communicate with passengers.",
-        tags: ["Kotlin", "Android SDK", "Jetpack Compose", "Google Maps"],
-        image: "/images/project-driver.png",
+        tags: [
+            "Android",
+            "Kotlin",
+            "Material3",
+            "Firebase",
+            "Clean-architecture",
+            "MVVM",
+            "Dependency-injection",
+        ],
+        image: "/images/project-driver-cover.png",
         links: { demo: "https://tinyurl.com/ycay7bx7" },
     },
     {
         title: "Bus Ticket Booking",
         description:
             "Intercity bus ticketing system featuring visual seat selection, real-time bus tracking, and secure payment processing.",
-        tags: ["Kotlin", "Android SDK", "Jetpack Compose", "Payment Gateway"],
-        image: "/images/project-bus.png",
+        tags: [
+            "Android",
+            "Kotlin",
+            "Material3",
+            "Firebase",
+            "Clean-architecture",
+            "MVVM",
+            "Dependency-injection",
+            "POS Printer",
+            "Socket",
+        ],
+        image: "/images/project-bus-cover.png",
         links: { demo: "https://tinyurl.com/4v29r4wj" },
     },
     {
         title: "Sales & Order Management",
         description:
             "Enterprise mobile tool for field sales representatives to manage customer orders, view inventory, and track sales performance offline.",
-        tags: ["Kotlin", "Android SDK", "Room DB", "Coroutines"],
-        image: "/images/project-sales.png",
+        tags: [
+            "Android",
+            "Kotlin",
+            "Material3",
+            "Firebase",
+            "Clean-architecture",
+            "MVVM",
+            "Dependency-injection",
+        ],
+        image: "/images/project-sales-cover.png",
         links: { demo: "https://tinyurl.com/vshpstmk" },
-    },
-    {
-        title: "Dating App",
-        description:
-            "Social discovery platform featuring advanced matching algorithms, real-time chat, and profile verification for a safe user experience.",
-        tags: ["Kotlin", "Android SDK", "Firebase", "WebRTC"],
-        image: "/images/project-dating.png",
-        links: { demo: "https://tinyurl.com/2kw3rdpv" },
     },
     {
         title: "Student Payment System",
         description:
             "Secure and intuitive payment gateway integration allowing students and parents to pay tuition and fees directly from their mobile devices.",
-        tags: ["Kotlin", "Android SDK", "Firebase", "Push Notification"],
+        tags: [
+            "Android",
+            "Kotlin",
+            "Material3",
+            "Firebase",
+            "Clean-architecture",
+            "MVVM",
+            "Dependency-injection",
+        ],
         image: "/images/project-payment-illustration.png",
         links: { demo: "https://tinyurl.com/bdz3pf4c" },
+    },
+    {
+        title: "Dating App",
+        description:
+            "Social discovery platform featuring advanced matching algorithms, real-time chat, and profile verification for a safe user experience.",
+        tags: [
+            "Jetpack Compose",
+            "Android",
+            "Kotlin",
+            "Material3",
+            "Firebase",
+            "Clean-architecture",
+            "MVVM",
+            "Dependency-injection",
+        ],
+        image: "/images/project-dating-cover.png",
+        links: { demo: "https://tinyurl.com/2kw3rdpv" },
     },
 ];
 
@@ -101,12 +160,28 @@ export function Projects() {
                                         ))}
                                     </div>
                                 </div>
-                                <div className="flex gap-4">
-                                    <Button size="sm" asChild className="w-full">
-                                        <Link href={project.links.demo} target="_blank">
-                                            <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
-                                        </Link>
-                                    </Button>
+                                <div className="flex gap-2">
+                                    {project.links.android && (
+                                        <Button size="sm" asChild className="w-full">
+                                            <Link href={project.links.android} target="_blank">
+                                                <ExternalLink className="mr-2 h-4 w-4" /> Play Store
+                                            </Link>
+                                        </Button>
+                                    )}
+                                    {project.links.ios && (
+                                        <Button size="sm" asChild className="w-full">
+                                            <Link href={project.links.ios} target="_blank">
+                                                <ExternalLink className="mr-2 h-4 w-4" /> App Store
+                                            </Link>
+                                        </Button>
+                                    )}
+                                    {project.links.demo && (
+                                        <Button size="sm" asChild className="w-full">
+                                            <Link href={project.links.demo} target="_blank">
+                                                <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
+                                            </Link>
+                                        </Button>
+                                    )}
                                 </div>
                             </div>
                         </Card>

@@ -19,7 +19,7 @@ export function Services() {
             icon: Layers,
         },
         {
-            title: "API Integration & Backend",
+            title: "API & Backend Integration",
             description:
                 "Seamlessly connecting mobile apps with properly architected backend services. Expertise in RESTful APIs, Firebase integration, and real-time data synchronization.",
             icon: Code2,
