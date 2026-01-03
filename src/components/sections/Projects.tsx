@@ -91,6 +91,17 @@ const projects: Project[] = [
         links: { demo: "https://tinyurl.com/vshpstmk" },
     },
     {
+        title: "Ispahani Agro Ltd",
+        description:
+            "A comprehensive mobile application for Ispahani Agro Ltd sales officers to manage indents, bills, and dealer interactions efficiently.",
+        tags: ["Android", "Sales Automation", "Offline Support", "Billing System"],
+        image: "/images/project-ispahani-agro-cover.png",
+        links: {
+            android:
+                "https://play.google.com/store/apps/details?id=com.stitbd.ispahani_agro_ltd",
+        },
+    },
+    {
         title: "Student Payment System",
         description:
             "Secure and intuitive payment gateway integration allowing students and parents to pay tuition and fees directly from their mobile devices.",
@@ -107,7 +118,7 @@ const projects: Project[] = [
         links: { demo: "https://tinyurl.com/bdz3pf4c" },
     },
     {
-        title: "Dating App",
+        title: "FriendFin",
         description:
             "Social discovery platform featuring advanced matching algorithms, real-time chat, and profile verification for a safe user experience.",
         tags: [

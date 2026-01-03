@@ -61,8 +61,10 @@ export function Hero() {
                             Check out my work <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
                     </Button>
-                    <Button size="lg" variant="outline">
-                        Download Resume <Download className="ml-2 h-4 w-4" />
+                    <Button size="lg" variant="outline" asChild>
+                        <a href="/resume.pdf" download="Atik_Faysal_Resume.pdf">
+                            Download Resume <Download className="ml-2 h-4 w-4" />
+                        </a>
                     </Button>
                 </motion.div>
             </div>
