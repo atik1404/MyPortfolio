@@ -62,7 +62,7 @@ export function Hero() {
                         </Link>
                     </Button>
                     <Button size="lg" variant="outline" asChild>
-                        <a href="/resume.pdf" download="Atik_Faysal_Resume.pdf">
+                        <a href="/AtikFaysal_SSE_5Y_EXP.pdf" download="AtikFaysal_SSE_5Y_EXP.pdf">
                             Download Resume <Download className="ml-2 h-4 w-4" />
                         </a>
                     </Button>
