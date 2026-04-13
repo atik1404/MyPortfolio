@@ -7,8 +7,8 @@ import { cn } from "@/lib/utils";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "A showcase of my work and skills",
+  title: "Atik Faysal | Mobile App Developer - Android & Flutter",
+  description: "Explore the portfolio of Atik Faysal, an experienced Mobile App Developer building high-performance Android and cross-platform applications.",
 };
 
 export default function RootLayout({
