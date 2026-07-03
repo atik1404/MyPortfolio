@@ -42,7 +42,7 @@ export function Experience() {
             current: true,
         },
         {
-            company: "JMI Pharma",
+            company: "Mononsoft Ltd.",
             role: "Software Engineer",
             location: "Dhaka, Bangladesh",
             startDate: "2020-08-01",
